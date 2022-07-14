@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "helper_js",
+    "pageId": "HOME",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\taccess_granter:async () => {\n\n\t\tselect_access_mode.run(()=>{\n\t\t\tstoreValue(\"access_type\",NaN)\n\t\t\tfor(let i=0;i<select_access_mode.data.length;i++)\n\t\t\t{\n\t\t\t\tif(appsmith.user.username==select_access_mode.data[i].COMPANY_EMAIL)\n\t\t\t\t{\n\t\t\t\t\tlet access=select_access_mode.data[i].ACCESS\n\t\t\t\t\tstoreValue(\"access_type\",access)\n\t\t\t\t\treturn\n\t\t\t\t}\n\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t })\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  },
+  "id": "HOME_helper_js",
+  "deleted": false,
+  "gitSyncId": "62be7320612750023eb014b3_62cb2e5201213a676a3565d6"
+}

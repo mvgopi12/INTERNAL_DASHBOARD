@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "helper_js",
+    "pageId": "MANUFACTURING_CONTROL",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\t/*\n\tauthentication: () => {\n\t\tif(appsmith.URL.queryParams.access!=\"MANUFACTURING_CONTROL\")\n\t\t\t{\n\t\t\t\tnavigateTo('ERROR_PAGE',{})\n\t\t\t}\n\t},\n\t*/\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  },
+  "id": "MANUFACTURING_CONTROL_helper_js",
+  "deleted": false,
+  "gitSyncId": "62be7320612750023eb014b3_62cb3e1f01213a676a35698a"
+}
