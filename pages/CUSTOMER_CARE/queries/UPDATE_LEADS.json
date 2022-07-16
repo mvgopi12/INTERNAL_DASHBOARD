@@ -123,7 +123,7 @@
           "componentData": "0"
         },
         "rowObjects": {
-          "data": "{{\n{\n\t\"rowIndex\":query_js.return_current_card().rowIndex,\n\t\"REMARK\":log_remark.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":log_date.formattedDate,\n\t\"NOTE\":log_note.text,\n\t\"ALTERNATE_NUMBER\":log_number.text,\n\t\"LOCATION\":log_location.text,\n\t\"ADDRESS\":log_address.text,\n\t\"STATUS\":log_status.selectedOptionLabel,\n\t\"ACTIVE\":\"false\"\n}\n}}",
+          "data": "{{\n{\n\t\"rowIndex\":query_js.return_current_card().rowIndex,\n\t\"REMARK\":log_remark.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":log_date.formattedDate,\n\t\"NOTE\":log_note.text,\n\t\"ALTERNATE_NUMBER\":log_number.text,\n\t\"LOCATION\":log_location.text,\n\t\"ADDRESS\":log_address.text,\n\t\"STATUS\":log_status.selectedOptionLabel,\n\t\"ACTIVE\": query_js.active()\n}\n}}",
           "viewType": "component",
           "componentData": "{{ \n{\n\t\"rowIndex\" : latest_entry_table.selectedRow.rowIndex,\n\t\"EMPLOYEE\" : employee_name.selectedOptionLabel,\n\t\"PHASE\"    : product_stage.selectedOptionLabel,\n\t\"DATE\"     : entry_date.formattedDate,\n\t\"QUANTITY\" : quantity.text\n} \n}}"
         },
@@ -135,7 +135,8 @@
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1MPmOti97p1i5n_kbkvKEGJHLaI9a3VDVjrYpzWVI8Ew/edit",
           "viewType": "component",
-          "componentData": "https://docs.google.com/spreadsheets/d/1WCz8kpPJ9DQ2EO3RHCVJFjfJYGl6Si4-Rv1JoVxELAo/edit"
+          "componentData": "https://docs.google.com/spreadsheets/d/1MPmOti97p1i5n_kbkvKEGJHLaI9a3VDVjrYpzWVI8Ew/edit",
+          "jsonData": "https://docs.google.com/spreadsheets/d/1MPmOti97p1i5n_kbkvKEGJHLaI9a3VDVjrYpzWVI8Ew/edit"
         },
         "smartSubstitution": {
           "data": true,
@@ -183,7 +184,7 @@
     "messages": [],
     "jsonPathKeys": [
       "{\n\t\"rowIndex\" : latest_entry_table.selectedRow.rowIndex,\n\t\"EMPLOYEE\" : employee_name.selectedOptionLabel,\n\t\"PHASE\"    : product_stage.selectedOptionLabel,\n\t\"DATE\"     : entry_date.formattedDate,\n\t\"QUANTITY\" : quantity.text\n}",
-      "{\n\t\"rowIndex\":query_js.return_current_card().rowIndex,\n\t\"REMARK\":log_remark.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":log_date.formattedDate,\n\t\"NOTE\":log_note.text,\n\t\"ALTERNATE_NUMBER\":log_number.text,\n\t\"LOCATION\":log_location.text,\n\t\"ADDRESS\":log_address.text,\n\t\"STATUS\":log_status.selectedOptionLabel,\n\t\"ACTIVE\":\"false\"\n}"
+      "{\n\t\"rowIndex\":query_js.return_current_card().rowIndex,\n\t\"REMARK\":log_remark.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":log_date.formattedDate,\n\t\"NOTE\":log_note.text,\n\t\"ALTERNATE_NUMBER\":log_number.text,\n\t\"LOCATION\":log_location.text,\n\t\"ADDRESS\":log_address.text,\n\t\"STATUS\":log_status.selectedOptionLabel,\n\t\"ACTIVE\": query_js.active()\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
