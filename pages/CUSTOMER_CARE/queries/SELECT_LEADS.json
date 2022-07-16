@@ -77,7 +77,7 @@
               {
                 "key": "ACTIVE",
                 "condition": "EQ",
-                "value": "TRUE"
+                "value": "true"
               }
             ]
           }

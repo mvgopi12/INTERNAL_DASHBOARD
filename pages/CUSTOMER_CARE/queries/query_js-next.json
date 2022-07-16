@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n  switch (appsmith.store.table_num) {\n    case 0:\n      if (appsmith.store.current_lead_card >= appsmith.store.table.length - 1) {\n        SELECT_LEADS.run();\n        storeValue(\"current_lead_card\", 0);\n        showAlert(\"Fresh leads have been updated\", \"success\");\n        return appsmith.store.current_lead_card;\n      }\n      storeValue(\"current_lead_card\", appsmith.store.current_lead_card + 1);\n      return appsmith.store.current_lead_card;\n      break;\n    case 1:\n      if (appsmith.store.current_demo_card >= appsmith.store.table.length - 1) {\n        SELECT_LEADS.run();\n        storeValue(\"current_demo_card\", 0);\n        showAlert(\"Confirmed leads have been updated\", \"success\");\n        return appsmith.store.current_demo_card;\n      }\n      storeValue(\"current_demo_card\", appsmith.store.current_demo_card + 1);\n      return appsmith.store.current_demo_card;\n      break;\n    case 2:\n      if (appsmith.store.current_call_back_card >= appsmith.store.table.length - 1) {\n        SELECT_LEADS.run();\n        storeValue(\"current_call_back_card\", 0);\n        showAlert(\"Followups have been updated\", \"success\");\n        return appsmith.store.current_call_back_card;\n      }\n      storeValue(\"current_call_back_card\", appsmith.store.current_call_back_card + 1);\n      return appsmith.store.current_call_back_card;\n      break;\n    case 3:\n      showAlert(\"Data updated\", \"success\");\n    default:\n      return Error();\n  }\n}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
