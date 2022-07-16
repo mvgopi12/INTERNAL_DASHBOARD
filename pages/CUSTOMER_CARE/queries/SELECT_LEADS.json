@@ -73,11 +73,6 @@
                 "key": "CALLER",
                 "condition": "EQ",
                 "value": "{{appsmith.user.username}}"
-              },
-              {
-                "key": "ACTIVE",
-                "condition": "EQ",
-                "value": "true"
               }
             ]
           }
