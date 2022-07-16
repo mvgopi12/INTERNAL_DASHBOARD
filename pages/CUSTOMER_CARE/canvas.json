@@ -153,7 +153,7 @@
                                   "detachFromLayout": true,
                                   "widgetId": "d9dvwm6sq4",
                                   "containerStyle": "none",
-                                  "bottomRow": 77.5,
+                                  "bottomRow": 70,
                                   "topRow": 0,
                                   "parentRowSpace": 1,
                                   "isVisible": true,
@@ -264,7 +264,7 @@
                                           "key": "onClick"
                                         }
                                       ],
-                                      "leftColumn": 25.82456140350877,
+                                      "leftColumn": 26,
                                       "dynamicBindingPathList": [
                                         {
                                           "key": "buttonColor"
@@ -280,7 +280,7 @@
                                       "isDisabled": false,
                                       "key": "da8ct810vc",
                                       "isDeprecated": false,
-                                      "rightColumn": 38.175438596491226,
+                                      "rightColumn": 38,
                                       "isDefaultClickDisabled": true,
                                       "widgetId": "uyof620yz2",
                                       "isVisible": "{{appsmith.store.table_num!=1}}",
@@ -340,7 +340,7 @@
                                       "isDisabled": false,
                                       "key": "da8ct810vc",
                                       "isDeprecated": false,
-                                      "rightColumn": 11.228070175438596,
+                                      "rightColumn": 11,
                                       "isDefaultClickDisabled": true,
                                       "widgetId": "xwbqwj1xun",
                                       "isVisible": "{{appsmith.store.table_num!=0}}",
@@ -1994,6 +1994,7 @@
                               "labelPosition": "Left",
                               "isDisabled": false,
                               "key": "r3s4y99m6m",
+                              "onDateSelected": "",
                               "labelTextSize": "0.875rem",
                               "isRequired": "",
                               "isDeprecated": false,
@@ -2521,7 +2522,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "Button2Copy",
-                      "onClick": "{{\n(()=>{\nquery_js.update_data()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.table_num!=3)\n\t{\n\t\tquery_js.next()\n\t}\ncloseModal(\"LEAD_DATA\")})()\n}}",
+                      "onClick": "{{\n(()=>{\nquery_js.update_data()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.table_num!=3)\n\t{\n\t\tquery_js.next()\n\t}\ncloseModal(\"LEAD_DATA\")})()\n\nresetWidget(\"log_date\",true)\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {

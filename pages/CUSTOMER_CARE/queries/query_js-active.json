@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (log_date.formattedDate != helper_js.get_today()) {\n    return false;\n  } else {\n    return true;\n  }\n}",
+      "body": "() => {\n  var date = log_date.formattedDate;\n  let scd = moment(date).format(\"DD/MM/YYYY\");\n  if (scd != helper_js.get_today() || scd == \" \") {\n    return false;\n  } else {\n    return true;\n  }\n}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (log_date.formattedDate != helper_js.get_today()) {\n    return false;\n  } else {\n    return true;\n  }\n}"
+      "() => {\n  var date = log_date.formattedDate;\n  let scd = moment(date).format(\"DD/MM/YYYY\");\n  if (scd != helper_js.get_today() || scd == \" \") {\n    return false;\n  } else {\n    return true;\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
