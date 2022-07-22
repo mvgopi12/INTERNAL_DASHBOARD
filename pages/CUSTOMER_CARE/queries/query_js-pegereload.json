@@ -16,10 +16,10 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_query_js",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"current_call_back_card\", 0);\n}",
+      "body": "() => {\n  storeValue(\"current_lead_card\", appsmith.store.current_lead_card);\n  storeValue(\"current_demo_card\", appsmith.store.current_demo_card);\n  storeValue(\"current_call_back_card\", appsmith.store.current_call_back_card);\n}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"current_call_back_card\", 0);\n}"
+      "() => {\n  storeValue(\"current_lead_card\", appsmith.store.current_lead_card);\n  storeValue(\"current_demo_card\", appsmith.store.current_demo_card);\n  storeValue(\"current_call_back_card\", appsmith.store.current_call_back_card);\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
