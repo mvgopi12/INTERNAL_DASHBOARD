@@ -2608,6 +2608,19 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "CUSTOMER_CARE_query_js.pegereload",
+              "name": "query_js.pegereload",
+              "collectionId": "CUSTOMER_CARE_query_js",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"current_call_back_card\", 0);\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "CUSTOMER_CARE_MONTHLY_TARGET",
               "name": "MONTHLY_TARGET",
               "confirmBeforeExecute": false,
