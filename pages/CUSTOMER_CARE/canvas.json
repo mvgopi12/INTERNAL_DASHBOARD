@@ -2608,6 +2608,16 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "CUSTOMER_CARE_SELECT_LEADS",
+              "name": "SELECT_LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "CUSTOMER_CARE_query_js.pegereload",
               "name": "query_js.pegereload",
               "collectionId": "CUSTOMER_CARE_query_js",
@@ -2644,18 +2654,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "CUSTOMER_CARE_SELECT_LEADS",
-              "name": "SELECT_LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]
