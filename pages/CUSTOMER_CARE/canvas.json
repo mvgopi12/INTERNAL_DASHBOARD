@@ -175,6 +175,66 @@
                                   "children": [
                                     {
                                       "boxShadow": "none",
+                                      "widgetName": "FOLLOWUPS",
+                                      "onClick": "{{SELECT_LEADS.run(() => {\nstoreValue(\"table_num\",3)\n\t\t\tif(isNaN(appsmith.store.current_followup_card))\n\t\t\t{\nstoreValue(\"current_followup_card\",0)\n\t\t\t}\nstoreValue(\"table\",query_js.get_followups_data())\n}, () => {})}}",
+                                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                                      "dynamicPropertyPathList": [
+                                        {
+                                          "key": "onClick"
+                                        },
+                                        {
+                                          "key": "isVisible"
+                                        }
+                                      ],
+                                      "displayName": "Button",
+                                      "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+                                      "searchTags": [
+                                        "click",
+                                        "submit"
+                                      ],
+                                      "topRow": 1,
+                                      "bottomRow": 5,
+                                      "parentRowSpace": 10,
+                                      "type": "BUTTON_WIDGET",
+                                      "hideCard": false,
+                                      "animateLoading": true,
+                                      "parentColumnSpace": 17.255859375,
+                                      "dynamicTriggerPathList": [
+                                        {
+                                          "key": "onClick"
+                                        }
+                                      ],
+                                      "leftColumn": 50,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "buttonColor"
+                                        },
+                                        {
+                                          "key": "borderRadius"
+                                        },
+                                        {
+                                          "key": "isVisible"
+                                        }
+                                      ],
+                                      "text": "FOLLOWUPS",
+                                      "isDisabled": false,
+                                      "key": "da8ct810vc",
+                                      "isDeprecated": false,
+                                      "rightColumn": 61,
+                                      "isDefaultClickDisabled": true,
+                                      "widgetId": "ermrgxn9b1",
+                                      "isVisible": "{{appsmith.store.table_num!=3}}",
+                                      "recaptchaType": "V3",
+                                      "version": 1,
+                                      "parentId": "d9dvwm6sq4",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                      "buttonVariant": "PRIMARY",
+                                      "placement": "CENTER"
+                                    },
+                                    {
+                                      "boxShadow": "none",
                                       "widgetName": "CALL_BACK_BUTTON",
                                       "onClick": "{{SELECT_LEADS.run(() => {\nstoreValue(\"table_num\",2)\n\t\t\tif(isNaN(appsmith.store.current_call_back_card))\n\t\t\t{\nstoreValue(\"current_call_back_card\",0)\n\t\t\t}\nstoreValue(\"table\",query_js.get_schedule_data())\n}, () => {})}}",
                                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -192,8 +252,8 @@
                                         "click",
                                         "submit"
                                       ],
-                                      "topRow": 0,
-                                      "bottomRow": 4,
+                                      "topRow": 1,
+                                      "bottomRow": 5,
                                       "parentRowSpace": 10,
                                       "type": "BUTTON_WIDGET",
                                       "hideCard": false,
@@ -204,7 +264,7 @@
                                           "key": "onClick"
                                         }
                                       ],
-                                      "leftColumn": 52.7719298245614,
+                                      "leftColumn": 34,
                                       "dynamicBindingPathList": [
                                         {
                                           "key": "buttonColor"
@@ -216,11 +276,11 @@
                                           "key": "isVisible"
                                         }
                                       ],
-                                      "text": "FOLLOWUPS",
+                                      "text": "CALL BACKS",
                                       "isDisabled": false,
                                       "key": "da8ct810vc",
                                       "isDeprecated": false,
-                                      "rightColumn": 64,
+                                      "rightColumn": 45,
                                       "isDefaultClickDisabled": true,
                                       "widgetId": "o56gtyr02k",
                                       "isVisible": "{{appsmith.store.table_num!=2}}",
@@ -252,8 +312,8 @@
                                         "click",
                                         "submit"
                                       ],
-                                      "topRow": 0,
-                                      "bottomRow": 4,
+                                      "topRow": 1,
+                                      "bottomRow": 5,
                                       "parentRowSpace": 10,
                                       "type": "BUTTON_WIDGET",
                                       "hideCard": false,
@@ -264,7 +324,7 @@
                                           "key": "onClick"
                                         }
                                       ],
-                                      "leftColumn": 26,
+                                      "leftColumn": 16,
                                       "dynamicBindingPathList": [
                                         {
                                           "key": "buttonColor"
@@ -276,11 +336,11 @@
                                           "key": "isVisible"
                                         }
                                       ],
-                                      "text": "CONFIRMED LEADS",
+                                      "text": "LIVE DATA",
                                       "isDisabled": false,
                                       "key": "da8ct810vc",
                                       "isDeprecated": false,
-                                      "rightColumn": 38,
+                                      "rightColumn": 28,
                                       "isDefaultClickDisabled": true,
                                       "widgetId": "uyof620yz2",
                                       "isVisible": "{{appsmith.store.table_num!=1}}",
@@ -312,8 +372,8 @@
                                         "click",
                                         "submit"
                                       ],
-                                      "topRow": 0,
-                                      "bottomRow": 4,
+                                      "topRow": 1,
+                                      "bottomRow": 5,
                                       "parentRowSpace": 10,
                                       "type": "BUTTON_WIDGET",
                                       "hideCard": false,
@@ -324,7 +384,7 @@
                                           "key": "onClick"
                                         }
                                       ],
-                                      "leftColumn": 0,
+                                      "leftColumn": 1,
                                       "dynamicBindingPathList": [
                                         {
                                           "key": "buttonColor"
@@ -340,7 +400,7 @@
                                       "isDisabled": false,
                                       "key": "da8ct810vc",
                                       "isDeprecated": false,
-                                      "rightColumn": 11,
+                                      "rightColumn": 12,
                                       "isDefaultClickDisabled": true,
                                       "widgetId": "xwbqwj1xun",
                                       "isVisible": "{{appsmith.store.table_num!=0}}",
@@ -451,7 +511,7 @@
                                       ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "{{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn appsmith.store.table[appsmith.store.current_lead_card].PHONE_NUMBER\n}\nelse if(appsmith.store.table_num==1)\n{\n\treturn appsmith.store.table[appsmith.store.current_demo_card].PHONE_NUMBER\n}else if(appsmith.store.table_num==2)\n{\n\treturn appsmith.store.table[appsmith.store.current_call_back_card].PHONE_NUMBER\n}\n\t\n})()}}",
+                                      "text": "{{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn appsmith.store.table[appsmith.store.current_lead_card].PHONE_NUMBER\n}\nelse if(appsmith.store.table_num==1)\n{\n\treturn appsmith.store.table[appsmith.store.current_demo_card].PHONE_NUMBER\n}else if(appsmith.store.table_num==2)\n{\n\treturn appsmith.store.table[appsmith.store.current_call_back_card].PHONE_NUMBER\n}else if(appsmith.store.table_num==3)\n{\n\treturn appsmith.store.table[appsmith.store.current_call_back_card].PHONE_NUMBER\n}\n\t\n})()}}",
                                       "key": "2ewoxh5341",
                                       "isDeprecated": false,
                                       "rightColumn": 39,
@@ -544,7 +604,7 @@
                                       ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "{{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn appsmith.store.table[appsmith.store.current_lead_card].NAME\n}\nelse if(appsmith.store.table_num==1)\n{\n\treturn appsmith.store.table[appsmith.store.current_demo_card].NAME\n}else if(appsmith.store.table_num==2)\n{\n\treturn appsmith.store.table[appsmith.store.current_call_back_card].NAME\n}\n\t\n})()}}",
+                                      "text": "{{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn appsmith.store.table[appsmith.store.current_lead_card].NAME\n}\nelse if(appsmith.store.table_num==1)\n{\n\treturn appsmith.store.table[appsmith.store.current_demo_card].NAME\n}else if(appsmith.store.table_num==2)\n{\n\treturn appsmith.store.table[appsmith.store.current_call_back_card].NAME\n}else if(appsmith.store.table_num==3)\n{\n\treturn appsmith.store.table[appsmith.store.current_call_back_card].NAME\n}\n\t\n})()}}",
                                       "key": "2ewoxh5341",
                                       "isDeprecated": false,
                                       "rightColumn": 46,
@@ -686,7 +746,7 @@
                                       ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "CARD NUMBER:   {{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn appsmith.store.current_lead_card+1\n}else if(appsmith.store.table_num==1)\n{\n\treturn appsmith.store.current_demo_card+1\n}else if(appsmith.store.table_num==2)\n{\n\treturn appsmith.store.current_call_back_card+1\n}\n})()}}",
+                                      "text": "CARD NUMBER:   {{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn appsmith.store.current_lead_card+1\n}else if(appsmith.store.table_num==1)\n{\n\treturn appsmith.store.current_demo_card+1\n}else if(appsmith.store.table_num==2)\n{\n\treturn appsmith.store.current_call_back_card+1\n}\n\telse if(appsmith.store.table_num==3)\n{\n\treturn appsmith.store.current_followup_card+1\n}\n})()}}",
                                       "key": "eyqipnt4mr",
                                       "isDeprecated": false,
                                       "rightColumn": 17,
@@ -757,7 +817,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn \"FRESH LEADS\"\n}else if(appsmith.store.table_num==1)\n{\n\treturn \"CONFIRMED LEADS\"\n}else if(appsmith.store.table_num==2)\n{\n\treturn \"FOLLOW UPS\"\n}\n})()}}",
+                              "text": "{{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn \"FRESH LEADS\"\n}else if(appsmith.store.table_num==1)\n{\n\treturn \"LIVE DATA\"\n}else if(appsmith.store.table_num==2)\n{\n\treturn \"CALL BACKS\"\n}\n\telse if(appsmith.store.table_num==3)\n{\n\treturn \"FOLLOWUPS\"\n}\n})()}}",
                               "key": "2ewoxh5341",
                               "isDeprecated": false,
                               "rightColumn": 64,
@@ -2616,17 +2676,6 @@
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "CUSTOMER_CARE_query_js.pegereload",
-              "name": "query_js.pegereload",
-              "collectionId": "CUSTOMER_CARE_query_js",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_lead_card\", appsmith.store.current_lead_card);\n  storeValue(\"current_demo_card\", appsmith.store.current_demo_card);\n  storeValue(\"current_call_back_card\", appsmith.store.current_call_back_card);\n}"
-              ],
-              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -2654,6 +2703,19 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "CUSTOMER_CARE_query_js.pegereload",
+              "name": "query_js.pegereload",
+              "collectionId": "CUSTOMER_CARE_query_js",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"table\", query_js.getTodayData());\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"table\", query_js.get_request_data());\n  storeValue(\"current_call_back_card\", 0);\n  storeValue(\"table\", query_js.get_schedule_data());\n  storeValue(\"current_followup_card\", 0);\n  storeValue(\"table\", query_js.get_followups_data());\n}"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

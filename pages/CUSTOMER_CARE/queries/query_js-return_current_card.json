@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (appsmith.store.table_num == 0) {\n    return appsmith.store.table[appsmith.store.current_lead_card];\n  } else if (appsmith.store.table_num == 1) {\n    return appsmith.store.table[appsmith.store.current_demo_card];\n  } else if (appsmith.store.table_num == 2) {\n    return appsmith.store.table[appsmith.store.current_call_back_card];\n  }\n  return appsmith.store.table[0];\n}",
+      "body": "() => {\n  if (appsmith.store.table_num == 0) {\n    return appsmith.store.table[appsmith.store.current_lead_card];\n  } else if (appsmith.store.table_num == 1) {\n    return appsmith.store.table[appsmith.store.current_demo_card];\n  } else if (appsmith.store.table_num == 2) {\n    return appsmith.store.table[appsmith.store.current_call_back_card];\n  } else if (appsmith.store.table_num == 3) {\n    return appsmith.store.table[appsmith.store.current_followup_card];\n  }\n  return appsmith.store.table[0];\n}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (appsmith.store.table_num == 0) {\n    return appsmith.store.table[appsmith.store.current_lead_card];\n  } else if (appsmith.store.table_num == 1) {\n    return appsmith.store.table[appsmith.store.current_demo_card];\n  } else if (appsmith.store.table_num == 2) {\n    return appsmith.store.table[appsmith.store.current_call_back_card];\n  }\n  return appsmith.store.table[0];\n}"
+      "() => {\n  if (appsmith.store.table_num == 0) {\n    return appsmith.store.table[appsmith.store.current_lead_card];\n  } else if (appsmith.store.table_num == 1) {\n    return appsmith.store.table[appsmith.store.current_demo_card];\n  } else if (appsmith.store.table_num == 2) {\n    return appsmith.store.table[appsmith.store.current_call_back_card];\n  } else if (appsmith.store.table_num == 3) {\n    return appsmith.store.table[appsmith.store.current_followup_card];\n  }\n  return appsmith.store.table[0];\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
