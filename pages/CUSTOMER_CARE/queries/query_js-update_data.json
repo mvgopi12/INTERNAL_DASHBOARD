@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (progress.text !== \"\") {\n    UPDATE_LEADS.run();\n    INSERT_LOGS.run();\n  }\n}",
+      "body": "() => {\n  UPDATE_LEADS.run();\n  INSERT_LOGS.run();\n}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (progress.text !== \"\") {\n    UPDATE_LEADS.run();\n    INSERT_LOGS.run();\n  }\n}"
+      "() => {\n  UPDATE_LEADS.run();\n  INSERT_LOGS.run();\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
