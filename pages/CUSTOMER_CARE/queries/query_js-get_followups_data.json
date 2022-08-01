@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "update_data",
-    "fullyQualifiedName": "query_js.update_data",
+    "name": "get_followups_data",
+    "fullyQualifiedName": "query_js.get_followups_data",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  UPDATE_LEADS.run();\n  INSERT_LOGS.run();\n}",
+      "body": "() => {\n  let data = [];\n  for (let i = 0; i < SELECT_LEADS.data.length; i++) {\n    if (SELECT_LEADS.data[i].REMARK == \"INTERESTED\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      data.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return data;\n}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  UPDATE_LEADS.run();\n  INSERT_LOGS.run();\n}"
+      "() => {\n  let data = [];\n  for (let i = 0; i < SELECT_LEADS.data.length; i++) {\n    if (SELECT_LEADS.data[i].REMARK == \"INTERESTED\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      data.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return data;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_query_js.update_data",
+  "id": "CUSTOMER_CARE_query_js.get_followups_data",
   "deleted": false,
-  "gitSyncId": "62be7320612750023eb014b3_62c9402f01213a676a3506df"
+  "gitSyncId": "62e0e7831d816b5fddf41176_62e1232b1d816b5fddf42ac7"
 }
