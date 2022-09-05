@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  var date = log_date.formattedDate;\n  let scd = moment(date).format(\"DD/MM/YYYY\");\n  if (scd != helper_js.get_today() || scd == \" \") {\n    return false;\n  } else {\n    return true;\n  }\n}",
+      "body": "() => {\n  if (log_remark.selectedOptionValue == \"CALL BACK\") {\n    return true;\n  } else {\n    return false;\n  }\n}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  var date = log_date.formattedDate;\n  let scd = moment(date).format(\"DD/MM/YYYY\");\n  if (scd != helper_js.get_today() || scd == \" \") {\n    return false;\n  } else {\n    return true;\n  }\n}"
+      "() => {\n  if (log_remark.selectedOptionValue == \"CALL BACK\") {\n    return true;\n  } else {\n    return false;\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
