@@ -53,7 +53,7 @@
                   "detachFromLayout": true,
                   "widgetId": "7w63mib23r",
                   "containerStyle": "none",
-                  "bottomRow": 1360,
+                  "bottomRow": 1400,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "isVisible": true,
@@ -1462,6 +1462,7 @@
                     },
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "onSort": "",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
                       "topRow": 90,
@@ -1616,7 +1617,7 @@
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 134,
+                      "bottomRow": 138,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -1625,7 +1626,14 @@
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 9.75,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onSort"
+                        },
+                        {
+                          "key": "onRowSelected"
+                        }
+                      ],
                       "primaryColumns": {
                         "LEAD_ID": {
                           "allowCellWrapping": false,
@@ -1988,6 +1996,7 @@
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}"
                         }
                       },
+                      "onRowSelected": "{{showModal('LEAD_DATA')}}",
                       "key": "h99jmtdazy",
                       "isDeprecated": false,
                       "rightColumn": 63,
