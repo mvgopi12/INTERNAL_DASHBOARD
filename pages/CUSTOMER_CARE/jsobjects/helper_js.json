@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\ttable_variables: [],\n\t/*\n\tauthentication: () => {\n\t\tif(appsmith.URL.queryParams.access!=\"CUSTOMER_CARE\")\n\t\t\t{\n\t\t\t\tnavigateTo('ERROR_PAGE',{})\n\t\t\t}\n\t},\n\t*/\n\tget_today: () => {\n\t\treturn moment().format(\"DD/MM/YYYY\")\n\t},\n\tto_date:(dateString)=>{\n\t\tlet date=moment(dateString).format('DD/MM/YYYY')\n\t\treturn date;\n\t},\n\tuntil_end_of_month:()=>\n\t{\n\t\tlet dateToday = new Date();\n\t\tlet lastDayOfMonth = new Date(dateToday.getFullYear(), dateToday.getMonth()+1, 0).getDate();\n\t\treturn (lastDayOfMonth - dateToday.getDate());\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "body": "export default {\n\ttable_variables: [],\n\t/*\n\tauthentication: () => {\n\t\tif(appsmith.URL.queryParams.access!=\"CUSTOMER_CARE\")\n\t\t\t{\n\t\t\t\tnavigateTo('ERROR_PAGE',{})\n\t\t\t}\n\t},\n\t*/\n\tget_today: () => {\n\t\treturn moment().format(\"DD/MM/YYYY\")\n\t},\n\tget_time:() => {\n\t\tvar today = new Date();\n\tvar time = today.getHours() + \":\" + today.getMinutes() + \":\" + today.getSeconds();\n\t\treturn time;\n},\n\tto_date:(dateString)=>{\n\t\tlet date=moment(dateString).format('DD/MM/YYYY')\n\t\treturn date;\n\t},\n\tuntil_end_of_month:()=>\n\t{\n\t\tlet dateToday = new Date();\n\t\tlet lastDayOfMonth = new Date(dateToday.getFullYear(), dateToday.getMonth()+1, 0).getDate();\n\t\treturn (lastDayOfMonth - dateToday.getDate());\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
     "variables": [
       {
         "name": "table_variables",

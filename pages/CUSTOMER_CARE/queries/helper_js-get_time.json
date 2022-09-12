@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "active",
-    "fullyQualifiedName": "query_js.active",
+    "name": "get_time",
+    "fullyQualifiedName": "helper_js.get_time",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "CUSTOMER_CARE",
-    "collectionId": "CUSTOMER_CARE_query_js",
+    "collectionId": "CUSTOMER_CARE_helper_js",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (log_remark.selectedOptionValue == \"CALL BACK\" || remark.selectedOptionValue == \"CALL BACK\") {\n    return true;\n  } else {\n    return false;\n  }\n}",
+      "body": "() => {\n  var today = new Date();\n  var time = today.getHours() + \":\" + today.getMinutes() + \":\" + today.getSeconds();\n  return time;\n}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (log_remark.selectedOptionValue == \"CALL BACK\" || remark.selectedOptionValue == \"CALL BACK\") {\n    return true;\n  } else {\n    return false;\n  }\n}"
+      "() => {\n  var today = new Date();\n  var time = today.getHours() + \":\" + today.getMinutes() + \":\" + today.getSeconds();\n  return time;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_query_js.active",
+  "id": "CUSTOMER_CARE_helper_js.get_time",
   "deleted": false,
-  "gitSyncId": "62d12b68279768242a2a3676_62d257f8279768242a2a915e"
+  "gitSyncId": "6315ceae9b89144767c6aa28_631f0571236aad0c01cfd19c"
 }

@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "search_customer",
-    "fullyQualifiedName": "query_js.search_customer",
+    "name": "getCallerData",
+    "fullyQualifiedName": "query_js.getCallerData",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let data = [];\n  for (let i = 0; i < SELECT_LEADS.data.length; i++) {\n    if (SELECT_LEADS.data[i].PHONE_NUMBER == customer_phone.text) {\n      data.push(SELECT_LEADS.data[i]);\n      break;\n    }\n  }\n  return data;\n}",
+      "body": "() => {\n  let callerData = [];\n  for (let i = GET_CALLERSDATA.data.length - 1; i >= 0; i--) {\n    if (GET_CALLERSDATA.data[i].STATUS != \"\") {\n      callerData.push(GET_CALLERSDATA.data[i]);\n    }\n  }\n  return callerData;\n}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let data = [];\n  for (let i = 0; i < SELECT_LEADS.data.length; i++) {\n    if (SELECT_LEADS.data[i].PHONE_NUMBER == customer_phone.text) {\n      data.push(SELECT_LEADS.data[i]);\n      break;\n    }\n  }\n  return data;\n}"
+      "() => {\n  let callerData = [];\n  for (let i = GET_CALLERSDATA.data.length - 1; i >= 0; i--) {\n    if (GET_CALLERSDATA.data[i].STATUS != \"\") {\n      callerData.push(GET_CALLERSDATA.data[i]);\n    }\n  }\n  return callerData;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_query_js.search_customer",
+  "id": "CUSTOMER_CARE_query_js.getCallerData",
   "deleted": false,
-  "gitSyncId": "62be7320612750023eb014b3_62cb15dc01213a676a3561e8"
+  "gitSyncId": "6315ceae9b89144767c6aa28_631ec89e767411587354cf0d"
 }

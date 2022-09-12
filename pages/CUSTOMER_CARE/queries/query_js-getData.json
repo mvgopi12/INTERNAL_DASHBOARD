@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "active",
-    "fullyQualifiedName": "query_js.active",
+    "name": "getData",
+    "fullyQualifiedName": "query_js.getData",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -16,10 +16,10 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_query_js",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (log_remark.selectedOptionValue == \"CALL BACK\" || remark.selectedOptionValue == \"CALL BACK\") {\n    return true;\n  } else {\n    return false;\n  }\n}",
+      "body": "() => {\n  let Data = [];\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].STATUS != \"\") {\n      returnData.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return returnData;\n}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (log_remark.selectedOptionValue == \"CALL BACK\" || remark.selectedOptionValue == \"CALL BACK\") {\n    return true;\n  } else {\n    return false;\n  }\n}"
+      "() => {\n  let Data = [];\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].STATUS != \"\") {\n      returnData.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return returnData;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_query_js.active",
+  "id": "CUSTOMER_CARE_query_js.getData",
   "deleted": false,
-  "gitSyncId": "62d12b68279768242a2a3676_62d257f8279768242a2a915e"
+  "gitSyncId": "6315ceae9b89144767c6aa28_631ec815236aad0c01cfcbb9"
 }
