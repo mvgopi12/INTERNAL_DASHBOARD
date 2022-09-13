@@ -123,7 +123,7 @@
           "componentData": "0"
         },
         "rowObjects": {
-          "data": "{{\n{\n\t\"NAME\" :Name.text || cust_name.text,\n\t\"PHONE_NUMBER\" : PhNum.text || phnum.text,\n\t\"REMARKS\":log_remark.selectedOptionLabel || remark.selectedOptionValue,\n\t\"DATE\":helper_js.get_today(),\n\t\"TIME\":helper_js.get_time(),\n\t\"CALLER\":appsmith.user.username\n}\n}}",
+          "data": "{{\n{\n\t\"NAME\" :Name.text,\n\t\"PHONE_NUMBER\" : PhNum.text,\n\t\"REMARKS\":log_remark.selectedOptionLabel,\n\t\"DATE\":helper_js.get_today(),\n\t\"TIME\":helper_js.get_time(),\n\t\"CALLER\":appsmith.user.username\n}\n}}",
           "viewType": "component",
           "componentData": "{{\n{\n\t\"EMPLOYEE\": employee_name.selectedOptionLabel,\n\t\"DATE\":entry_date.formattedDate,\n\t\"PHASE\":product_stage.selectedOptionLabel,\n\t\"QUANTITY\":quantity.text\n}\n}}"
         },
@@ -183,7 +183,7 @@
     "messages": [],
     "jsonPathKeys": [
       "{\n\t\"EMPLOYEE\": employee_name.selectedOptionLabel,\n\t\"DATE\":entry_date.formattedDate,\n\t\"PHASE\":product_stage.selectedOptionLabel,\n\t\"QUANTITY\":quantity.text\n}",
-      "{\n\t\"NAME\" :Name.text || cust_name.text,\n\t\"PHONE_NUMBER\" : PhNum.text || phnum.text,\n\t\"REMARKS\":log_remark.selectedOptionLabel || remark.selectedOptionValue,\n\t\"DATE\":helper_js.get_today(),\n\t\"TIME\":helper_js.get_time(),\n\t\"CALLER\":appsmith.user.username\n}"
+      "{\n\t\"NAME\" :Name.text,\n\t\"PHONE_NUMBER\" : PhNum.text,\n\t\"REMARKS\":log_remark.selectedOptionLabel,\n\t\"DATE\":helper_js.get_today(),\n\t\"TIME\":helper_js.get_time(),\n\t\"CALLER\":appsmith.user.username\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
