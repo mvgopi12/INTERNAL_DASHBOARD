@@ -16,7 +16,7 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_query_js",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  let Data = [];\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].STATUS != \"\") {\n      returnData.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return returnData;\n}",

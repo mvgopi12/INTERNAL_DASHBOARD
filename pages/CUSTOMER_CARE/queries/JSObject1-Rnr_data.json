@@ -16,7 +16,7 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_Daily_Report",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {}",
