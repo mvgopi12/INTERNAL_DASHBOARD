@@ -5863,7 +5863,13 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button16",
+                      "onClick": "{{\n(()=>{\nINSERT_DAILYREPORT.run()\ncloseModal(\"Daily_data\")})()\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -5877,6 +5883,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 8.71875,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 45,
                       "dynamicBindingPathList": [
                         {
