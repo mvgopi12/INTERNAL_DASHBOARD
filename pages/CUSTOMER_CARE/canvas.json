@@ -4344,7 +4344,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button13",
-                      "onClick": "{{\n(()=>{\nUPDATE_CUSTOMER.run()\nshowAlert(\"INSERTED! \",\"sucess\")\n\tUPDATE_LOGS_CUST.run()\ncloseModal(\"Update_Cust\")})()\n\n{{resetWidget(\"cust_Schd\",true)}}\n{{GET_CALLERSDATA.run()}}\n}}\n",
+                      "onClick": "{{\n(()=>{\nquery_js.update_cust()\nshowAlert(\"INSERTED! \",\"sucess\")\n\t\ncloseModal(\"Update_Cust\")})()\n\n{{resetWidget(\"cust_Schd\",true)}}\n{{resetWidget(\"update_status\",true)}}\n}}\n{{GET_CALLERSDATA.run()}}\n",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -4551,8 +4551,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 33,
-                      "bottomRow": 37,
+                      "topRow": 35,
+                      "bottomRow": 39,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -4750,10 +4750,10 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 32,
-                      "bottomRow": 40,
+                      "topRow": 34,
+                      "bottomRow": 42,
                       "parentRowSpace": 10,
-                      "labelWidth": 5,
+                      "labelWidth": "20",
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
                       "hideCard": false,
@@ -4794,6 +4794,61 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "iconAlign": "left",
                       "defaultText": "{{Table1.selectedRow.NOTE}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "update_status",
+                      "isFilterable": true,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                      "labelText": "STATUS :",
+                      "searchTags": [
+                        "dropdown"
+                      ],
+                      "topRow": 29,
+                      "bottomRow": 33,
+                      "parentRowSpace": 10,
+                      "labelWidth": "20",
+                      "type": "SELECT_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Table1.selectedRow.STATUS))(update_status.options, update_status.serverSideFiltering) }}",
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 4,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
+                        }
+                      ],
+                      "labelPosition": "Left",
+                      "options": "{{STATUS_DROP_DOWN.data.map( (obj) =>{ return  {'label': obj.STATUS, 'value': obj.STATUS } })}}",
+                      "placeholderText": "Select option",
+                      "isDisabled": false,
+                      "key": "zllnccjey5",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 53,
+                      "widgetId": "4j5m6q90ua",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "9qh28yye1e",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                     }
                   ],
                   "isDisabled": false,

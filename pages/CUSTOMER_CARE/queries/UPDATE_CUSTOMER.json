@@ -123,7 +123,7 @@
           "componentData": "0"
         },
         "rowObjects": {
-          "data": "{{\n\t{\n\t\"rowIndex\" : Table1.selectedRow.rowIndex,\n\t\"REMARK\":cust_Remark.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":cust_Schd.formattedDate,\n\t\"NOTE\":cust_Note.text,\n\t\"ACTIVE\": query_js.active()\n\t}\n}}",
+          "data": "{{\n\t{\n\t\"rowIndex\" : Table1.selectedRow.rowIndex,\n\t\"REMARK\":cust_Remark.selectedOptionLabel,\n\t\"STATUS\":update_status.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":cust_Schd.formattedDate,\n\t\"NOTE\":cust_Note.text,\n\t\"ACTIVE\": query_js.active()\n\t}\n}}",
           "viewType": "component",
           "componentData": "{{ \n{\n\t\"rowIndex\" : latest_entry_table.selectedRow.rowIndex,\n\t\"EMPLOYEE\" : employee_name.selectedOptionLabel,\n\t\"PHASE\"    : product_stage.selectedOptionLabel,\n\t\"DATE\"     : entry_date.formattedDate,\n\t\"QUANTITY\" : quantity.text\n} \n}}"
         },
@@ -183,7 +183,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "{\n\t\"rowIndex\" : Table1.selectedRow.rowIndex,\n\t\"REMARK\":cust_Remark.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":cust_Schd.formattedDate,\n\t\"NOTE\":cust_Note.text,\n\t\"ACTIVE\": query_js.active()\n\t}",
+      "{\n\t\"rowIndex\" : Table1.selectedRow.rowIndex,\n\t\"REMARK\":cust_Remark.selectedOptionLabel,\n\t\"STATUS\":update_status.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":cust_Schd.formattedDate,\n\t\"NOTE\":cust_Note.text,\n\t\"ACTIVE\": query_js.active()\n\t}",
       "{\n\t\"rowIndex\" : latest_entry_table.selectedRow.rowIndex,\n\t\"EMPLOYEE\" : employee_name.selectedOptionLabel,\n\t\"PHASE\"    : product_stage.selectedOptionLabel,\n\t\"DATE\"     : entry_date.formattedDate,\n\t\"QUANTITY\" : quantity.text\n}"
     ],
     "userSetOnLoad": false,
