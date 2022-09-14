@@ -4344,7 +4344,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button13",
-                      "onClick": "{{\n(()=>{\nUPDATE_CUSTOMER.run()\nshowAlert(\"INSERTED! \",\"sucess\")\n\tUPDATE_LOGS_CUST.run()\ncloseModal(\"Update_Cust\")})()\n\n{{resetWidget(\"cust_Schd\",true)}}\n}}",
+                      "onClick": "{{\n(()=>{\nUPDATE_CUSTOMER.run()\nshowAlert(\"INSERTED! \",\"sucess\")\n\tUPDATE_LOGS_CUST.run()\ncloseModal(\"Update_Cust\")})()\n\n{{resetWidget(\"cust_Schd\",true)}}\n{{GET_CALLERSDATA.run()}}\n}}\n",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -5951,6 +5951,18 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "CUSTOMER_CARE_SELECT_LEADS",
+              "name": "SELECT_LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "CUSTOMER_CARE_GET_CALLERSDATA",
               "name": "GET_CALLERSDATA",
               "confirmBeforeExecute": false,
@@ -5996,18 +6008,6 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"table\", query_js.getTodayData());\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"table\", query_js.get_request_data());\n  storeValue(\"current_call_back_card\", 0);\n  storeValue(\"table\", query_js.get_schedule_data());\n  storeValue(\"current_followup_card\", 0);\n  storeValue(\"table\", query_js.get_followups_data());\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "CUSTOMER_CARE_SELECT_LEADS",
-              "name": "SELECT_LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
             }
