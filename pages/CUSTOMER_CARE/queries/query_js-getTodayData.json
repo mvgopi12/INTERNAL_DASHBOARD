@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let returnData = [];\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].REMARK == \"NONE\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      returnData.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return returnData;\n}",
+      "body": "() => {\n  let returnData = [];\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].REMARK == \"OLD LEADS\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      returnData.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return returnData;\n}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let returnData = [];\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].REMARK == \"NONE\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      returnData.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return returnData;\n}"
+      "() => {\n  let returnData = [];\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].REMARK == \"OLD LEADS\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      returnData.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return returnData;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
