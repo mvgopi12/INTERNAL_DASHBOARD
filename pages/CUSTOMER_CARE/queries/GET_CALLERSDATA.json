@@ -65,7 +65,9 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "LT"
+                "condition": "EQ",
+                "key": "CALLER",
+                "value": "{{appsmith.user.username}}"
               }
             ]
           }
@@ -73,11 +75,17 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.where.data.children[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.user.username"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

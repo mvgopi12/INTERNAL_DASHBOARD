@@ -6037,7 +6037,9 @@
               "name": "GET_CALLERSDATA",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
               "timeoutInMillisecond": 10000
             }
           ],
