@@ -6115,6 +6115,16 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "CUSTOMER_CARE_SELECT_LEADS_CALLBACK",
+              "name": "SELECT_LEADS_CALLBACK",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "CUSTOMER_CARE_MONTHLY_TARGET",
               "name": "MONTHLY_TARGET",
               "confirmBeforeExecute": false,
