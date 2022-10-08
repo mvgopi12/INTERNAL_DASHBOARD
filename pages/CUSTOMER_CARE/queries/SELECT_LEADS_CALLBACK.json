@@ -72,7 +72,7 @@
               {
                 "key": "CALLER",
                 "condition": "EQ",
-                "value": "sheela@lustralwater.com"
+                "value": "{{appsmith.user.username}}"
               },
               {
                 "key": "ACTIVE",
@@ -85,11 +85,17 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.where.data.children[1].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.user.username"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
