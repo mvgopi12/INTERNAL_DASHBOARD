@@ -16,7 +16,7 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_helper_js",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  return moment().format(\"YYYY-MM-YY hh:mm\");\n}",
