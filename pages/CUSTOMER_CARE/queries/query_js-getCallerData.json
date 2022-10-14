@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  let callerData = [];\n  for (let i = GET_CALLERSDATA.data.length - 1; i >= 0; i--) {\n    if (GET_CALLERSDATA.data[i].STATUS != \"\") {\n      callerData.push(GET_CALLERSDATA.data[i]);\n    }\n  }\n  return callerData;\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
     },

@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  var today = new Date();\n  var time = today.getHours() + \":\" + today.getMinutes() + \":\" + today.getSeconds();\n  return time;\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
     },

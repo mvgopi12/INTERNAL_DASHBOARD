@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  let locations = [];\n  for (let i = 0; i < customer_details_query.data.length; i++) {\n    let raw_string = customer_details_query.data[i].LOCATION.split(\",\");\n    let location = {};\n    location.lat = parseFloat(raw_string[0]);\n    location.long = parseFloat(raw_string[1]);\n    location.title = parseInt(customer_details_query.data[i].rowIndex);\n    locations.push(location);\n  }\n  return locations;\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
     },

@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  let dateToday = new Date();\n  let lastDayOfMonth = new Date(dateToday.getFullYear(), dateToday.getMonth() + 1, 0).getDate();\n  return lastDayOfMonth - dateToday.getDate();\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
     },

@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  let returnData = [];\n  for (let i = 0; i < SELECT_LEADS.data.length; i++) {\n    if (SELECT_LEADS.data[i].STATUS != \"COMPLETE\" && SELECT_LEADS.data[i].REMARK != \"INSTALL REQUEST\" && SELECT_LEADS.data[i].SCHEDULE_DATE == \"\") {\n      returnData.push(SELECT_LEADS.data[i]);\n    }\n  }\n  return returnData;\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
     },
