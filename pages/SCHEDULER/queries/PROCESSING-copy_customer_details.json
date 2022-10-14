@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  let data = pop1_date.formattedDate + \"\\n\" + pop1_userid.text + \"\\nNAME: \" + pop1_name.text + \"\\nCONTACT: \" + pop1_number.text + \"\\nADDRESS: \" + pop1_address.text + \"\\nNOTE: \" + pop1_note.text + \"\\nLOCATION: \" + Map1.selectedMarker.lat + \",\" + Map1.selectedMarker.long;\n  showAlert(\"copied!\", \"success\");\n  return data;\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
     },

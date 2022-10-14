@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "dateString => {\n  var dateParts = dateString.split(\"/\");\n  var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);\n  return dateObject;\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [
         {
           "name": "\"/\""

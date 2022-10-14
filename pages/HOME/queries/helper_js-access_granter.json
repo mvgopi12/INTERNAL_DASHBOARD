@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async () => {\n  select_access_mode.run(() => {\n    storeValue(\"access_type\", NaN);\n    for (let i = 0; i < select_access_mode.data.length; i++) {\n      if (appsmith.user.username == select_access_mode.data[i].COMPANY_EMAIL) {\n        let access = select_access_mode.data[i].ACCESS;\n        storeValue(\"access_type\", access);\n        return;\n      }\n    }\n  });\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
