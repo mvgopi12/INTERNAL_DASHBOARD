@@ -227,7 +227,7 @@
                                     {
                                       "boxShadow": "none",
                                       "widgetName": "CALL_BACK_BUTTON",
-                                      "onClick": "{{SELECT_LEADS_CALLBACK.run(() => {\nstoreValue(\"table_num\",2)\n\t\t\tif(isNaN(appsmith.store.current_call_back_card))\n\t\t\t{\nstoreValue(\"current_call_back_card\",0)\n\t\t\t}\n\tstoreValue(\"current_call_back_card\",0)\nstoreValue(\"table\",query_js.get_schedule_data())\n}, () => {})}}",
+                                      "onClick": "{{SELECT_LEADS_CALLBACK.run(() => {\nstoreValue(\"table_num\",2)\n\t\t\tif(isNaN(appsmith.store.current_call_back_card))\n\t\t\t{\nstoreValue(\"current_call_back_card\",0)\n\t\t\t}\n\tstoreValue(\"current_call_back_card\",0)\nstoreValue(\"table\",search)\n}, () => {})}}",
                                       "buttonColor": "#4f46e5",
                                       "dynamicPropertyPathList": [
                                         {
@@ -1169,8 +1169,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 0,
-                      "bottomRow": 5,
+                      "topRow": 6,
+                      "bottomRow": 11,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1219,8 +1219,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 12,
-                      "bottomRow": 16,
+                      "topRow": 17,
+                      "bottomRow": 21,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1229,7 +1229,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 9.75,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 36,
+                      "leftColumn": 26,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -1243,7 +1243,7 @@
                       "text": "OLD LEADS :",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
-                      "rightColumn": 52,
+                      "rightColumn": 37,
                       "textAlign": "LEFT",
                       "widgetId": "46vj01hl29",
                       "isVisible": true,
@@ -1265,8 +1265,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 12,
-                      "bottomRow": 16,
+                      "topRow": 17,
+                      "bottomRow": 21,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1275,7 +1275,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 9.75,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 54,
+                      "leftColumn": 40,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -1292,7 +1292,7 @@
                       "text": "{{DATA_COUNT.Old_Count()}}",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
-                      "rightColumn": 59,
+                      "rightColumn": 45,
                       "textAlign": "LEFT",
                       "widgetId": "rpp3savmel",
                       "isVisible": true,
@@ -1314,8 +1314,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 12,
+                      "bottomRow": 16,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1338,7 +1338,7 @@
                       "text": "LIVE DATA :",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
-                      "rightColumn": 21,
+                      "rightColumn": 15,
                       "textAlign": "LEFT",
                       "widgetId": "0s1ijy9nbo",
                       "isVisible": true,
@@ -1360,8 +1360,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 12,
+                      "bottomRow": 16,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1370,7 +1370,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 9.75,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 23,
+                      "leftColumn": 19,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -1387,7 +1387,7 @@
                       "text": "{{DATA_COUNT.Livedata_Count()}}",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
-                      "rightColumn": 28,
+                      "rightColumn": 24,
                       "textAlign": "LEFT",
                       "widgetId": "fognyaww7r",
                       "isVisible": true,
@@ -1409,8 +1409,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 12,
-                      "bottomRow": 16,
+                      "topRow": 17,
+                      "bottomRow": 21,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1433,7 +1433,7 @@
                       "text": "CALL BACKS :",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
-                      "rightColumn": 21,
+                      "rightColumn": 17,
                       "textAlign": "LEFT",
                       "widgetId": "uf8j5fungm",
                       "isVisible": true,
@@ -1455,8 +1455,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 12,
-                      "bottomRow": 16,
+                      "topRow": 17,
+                      "bottomRow": 21,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1465,7 +1465,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 9.75,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 23,
+                      "leftColumn": 19,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -1482,7 +1482,7 @@
                       "text": "{{DATA_COUNT.Callbacks_Count()}}",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
-                      "rightColumn": 28,
+                      "rightColumn": 24,
                       "textAlign": "LEFT",
                       "widgetId": "rbm4osont1",
                       "isVisible": true,
@@ -1504,8 +1504,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 12,
+                      "bottomRow": 16,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1514,7 +1514,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 9.75,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 36,
+                      "leftColumn": 26,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -1528,7 +1528,7 @@
                       "text": "FOLLOWUPS :",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
-                      "rightColumn": 52,
+                      "rightColumn": 38,
                       "textAlign": "LEFT",
                       "widgetId": "svjmylyb2o",
                       "isVisible": true,
@@ -1550,8 +1550,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 12,
+                      "bottomRow": 16,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1560,7 +1560,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 9.75,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 54,
+                      "leftColumn": 40,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -1577,7 +1577,7 @@
                       "text": "{{DATA_COUNT.Followups_Count()}}",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
-                      "rightColumn": 59,
+                      "rightColumn": 45,
                       "textAlign": "LEFT",
                       "widgetId": "f3ne88osxd",
                       "isVisible": true,
@@ -1743,7 +1743,13 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button17",
+                      "onClick": "{{GET_CALLERSDATA.run(() => {\n\tSearch.search_Customer()\n}, () => {})}}",
                       "buttonColor": "#4f46e5",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -1757,7 +1763,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 9.75,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 32,
                       "dynamicBindingPathList": [
                         {
@@ -1771,6 +1781,62 @@
                       "rightColumn": 48,
                       "isDefaultClickDisabled": true,
                       "widgetId": "r7jizps95p",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "7w63mib23r",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "disabledWhenInvalid": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "PRIMARY",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "resetFormOnClick": false,
+                      "boxShadow": "none",
+                      "widgetName": "Button18",
+                      "onClick": "{{ACTIVATION.run()}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 22,
+                      "bottomRow": 26,
+                      "parentRowSpace": 10,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 9.75,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 3,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "text": "Activation",
+                      "isDisabled": false,
+                      "key": "0wxcd41ebj",
+                      "isDeprecated": false,
+                      "rightColumn": 19,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "h8b3y2p4ns",
                       "isVisible": true,
                       "recaptchaType": "V3",
                       "version": 1,
@@ -2254,14 +2320,17 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "log_date",
-                              "minDate": "1920-12-31T18:30:00.000Z",
-                              "dateFormat": "YYYY-MM-DD HH:mm",
+                              "minDate": "2022-10-15T15:03:43.4343+05:30",
+                              "dateFormat": "DD/MM/YYYY HH:mm",
                               "dynamicPropertyPathList": [
+                                {
+                                  "key": "isVisible"
+                                },
                                 {
                                   "key": "isRequired"
                                 },
                                 {
-                                  "key": "isVisible"
+                                  "key": "minDate"
                                 }
                               ],
                               "displayName": "DatePicker",
@@ -2296,7 +2365,7 @@
                               "key": "r3s4y99m6m",
                               "onDateSelected": "",
                               "labelTextSize": "0.875rem",
-                              "isRequired": "",
+                              "isRequired": "false",
                               "isDeprecated": false,
                               "rightColumn": 64,
                               "widgetId": "4plz73cqsa",
@@ -2820,7 +2889,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "Button2Copy",
-                      "onClick": "{{\n(()=>{\nquery_js.update_data()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.table_num!=4)\n\t{\n\t\tquery_js.next()\n\t}\ncloseModal(\"LEAD_DATA\")})()\n\nresetWidget(\"log_date\",true)\n}}",
+                      "onClick": "{{\n(()=>{\nquery_js.update_data()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.table_num!=4)\n\t{\n\t\tquery_js.next()\n\t}\ncloseModal(\"LEAD_DATA\")})()\nSELECT_LEADS.run()\nresetWidget(\"log_date\",true)\n}}",
                       "buttonColor": "#4f46e5",
                       "dynamicPropertyPathList": [
                         {
@@ -5518,6 +5587,30 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "CUSTOMER_CARE_SELECT_LEADS",
+              "name": "SELECT_LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "CUSTOMER_CARE_SELECT_LEADS_CALLBACK",
+              "name": "SELECT_LEADS_CALLBACK",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "CUSTOMER_CARE_REMARK_DROP_DOWN",
               "name": "REMARK_DROP_DOWN",
               "confirmBeforeExecute": false,
@@ -5532,7 +5625,9 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "CUSTOMER_CARE_query_js.pegereload",
               "name": "query_js.pegereload",
@@ -5547,34 +5642,12 @@
           ],
           [
             {
-              "id": "CUSTOMER_CARE_SELECT_LEADS",
-              "name": "SELECT_LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "CUSTOMER_CARE_Logs_data",
               "name": "Logs_data",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
-                "appsmith.user.username",
-                "helper_js.get_today()"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "CUSTOMER_CARE_SELECT_LEADS_CALLBACK",
-              "name": "SELECT_LEADS_CALLBACK",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
+                "helper_js.get_today()",
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000

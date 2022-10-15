@@ -124,7 +124,7 @@
           "componentData": "0"
         },
         "rowObjects": {
-          "data": "{{\n{\n\t\"NAME\": cust_name.text,\n\t\"PHONE_NUMBER\":phnum.text,\n\t\"EMAIL\":email.text,\n\t\"DATE\":helper_js.get_today(),\n\t\"CALLER\" : appsmith.user.username,\n\t\"STATUS\" : \"PENDING\",\n\t\"REMARK\":remark.selectedOptionValue,\n\t\"SCHEDULE_DATE\":schd.formattedDate,\n\t\t\"NOTE\" : note.text,\n\t\t\t\"ACTIVE\" : query_js.active()\n}\n}}",
+          "data": "{{\n{\n\t\"NAME\": cust_name.text,\n\t\"PHONE_NUMBER\":phnum.text,\n\t\"EMAIL\":email.text,\n\t\"DATE\":helper_js.get_today(),\n\t\"CALLER\" : appsmith.user.username,\n\t\"STATUS\" : \"PENDING\",\n\t\"REMARK\":remark.selectedOptionValue,\n\t\"SCHEDULE_DATE\":schd.formattedDate || Search.RNR_Schd(),\n\t\t\"NOTE\" : note.text,\n\t\t\t\"ACTIVE\" : query_js.active()\n}\n}}",
           "viewType": "component",
           "componentData": "{{\n{\n\t\"EMPLOYEE\": employee_name.selectedOptionLabel,\n\t\"DATE\":entry_date.formattedDate,\n\t\"PHASE\":product_stage.selectedOptionLabel,\n\t\"QUANTITY\":quantity.text\n}\n}}"
         },
@@ -184,7 +184,7 @@
     "messages": [],
     "jsonPathKeys": [
       "{\n\t\"EMPLOYEE\": employee_name.selectedOptionLabel,\n\t\"DATE\":entry_date.formattedDate,\n\t\"PHASE\":product_stage.selectedOptionLabel,\n\t\"QUANTITY\":quantity.text\n}",
-      "{\n\t\"NAME\": cust_name.text,\n\t\"PHONE_NUMBER\":phnum.text,\n\t\"EMAIL\":email.text,\n\t\"DATE\":helper_js.get_today(),\n\t\"CALLER\" : appsmith.user.username,\n\t\"STATUS\" : \"PENDING\",\n\t\"REMARK\":remark.selectedOptionValue,\n\t\"SCHEDULE_DATE\":schd.formattedDate,\n\t\t\"NOTE\" : note.text,\n\t\t\t\"ACTIVE\" : query_js.active()\n}"
+      "{\n\t\"NAME\": cust_name.text,\n\t\"PHONE_NUMBER\":phnum.text,\n\t\"EMAIL\":email.text,\n\t\"DATE\":helper_js.get_today(),\n\t\"CALLER\" : appsmith.user.username,\n\t\"STATUS\" : \"PENDING\",\n\t\"REMARK\":remark.selectedOptionValue,\n\t\"SCHEDULE_DATE\":schd.formattedDate || Search.RNR_Schd(),\n\t\t\"NOTE\" : note.text,\n\t\t\t\"ACTIVE\" : query_js.active()\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
