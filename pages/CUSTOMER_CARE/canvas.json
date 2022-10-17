@@ -227,7 +227,7 @@
                                     {
                                       "boxShadow": "none",
                                       "widgetName": "CALL_BACK_BUTTON",
-                                      "onClick": "{{SELECT_LEADS_CALLBACK.run(() => {\nstoreValue(\"table_num\",2)\n\t\t\tif(isNaN(appsmith.store.current_call_back_card))\n\t\t\t{\nstoreValue(\"current_call_back_card\",0)\n\t\t\t}\n\tstoreValue(\"current_call_back_card\",0)\nstoreValue(\"table\",search)\n}, () => {})}}",
+                                      "onClick": "{{SELECT_LEADS_CALLBACK.run(() => {\nstoreValue(\"table_num\",2)\n\t\t\tif(isNaN(appsmith.store.current_call_back_card))\n\t\t\t{\nstoreValue(\"current_call_back_card\",0)\n\t\t\t}\n\tstoreValue(\"current_call_back_card\",0)\nstoreValue(\"table\",Search.Schd())\n}, () => {})}}",
                                       "buttonColor": "#4f46e5",
                                       "dynamicPropertyPathList": [
                                         {
