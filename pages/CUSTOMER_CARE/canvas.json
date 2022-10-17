@@ -5587,18 +5587,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "CUSTOMER_CARE_SELECT_LEADS",
-              "name": "SELECT_LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "CUSTOMER_CARE_SELECT_LEADS_CALLBACK",
               "name": "SELECT_LEADS_CALLBACK",
               "confirmBeforeExecute": false,
@@ -5625,9 +5613,7 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "CUSTOMER_CARE_query_js.pegereload",
               "name": "query_js.pegereload",
@@ -5636,6 +5622,18 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"table\", query_js.getTodayData());\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"table\", query_js.get_request_data());\n  storeValue(\"current_call_back_card\", 0);\n  storeValue(\"table\", query_js.get_schedule_data());\n  storeValue(\"current_followup_card\", 0);\n  storeValue(\"table\", query_js.get_followups_data());\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "CUSTOMER_CARE_SELECT_LEADS",
+              "name": "SELECT_LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
             }
