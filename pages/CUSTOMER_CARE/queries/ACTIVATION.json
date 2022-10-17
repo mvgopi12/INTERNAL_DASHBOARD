@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "GET_CALLERSDATA",
+    "name": "ACTIVATION",
     "datasource": {
       "name": "CUSTOMER_CARE",
       "pluginId": "google-sheets-plugin",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "UPDATE_MANY"
         },
         "entityType": {
           "data": "ROWS"
@@ -41,6 +41,9 @@
         "range": {
           "data": ""
         },
+        "rowObjects": {
+          "data": "{{\n{\n\t\"ACTIVE\" : Search.activation()\n}\n}}"
+        },
         "sheetName": {
           "data": "LEADS"
         },
@@ -50,27 +53,12 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "EQ",
-                "key": "CALLER",
-                "value": "{{appsmith.user.username}}"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
@@ -78,21 +66,21 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.where.data.children[0].value"
+        "key": "formData.rowObjects.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.user.username"
+      "{\n\t\"ACTIVE\" : Search.activation()\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_GET_CALLERSDATA",
+  "id": "CUSTOMER_CARE_ACTIVATION",
   "deleted": false,
-  "gitSyncId": "6315ceae9b89144767c6aa28_631ebf6b236aad0c01cfca23"
+  "gitSyncId": "63493429528b216c77fefa59_634953f70c4af9738a7ae39a"
 }

@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "update_cust",
-    "fullyQualifiedName": "query_js.update_cust",
+    "name": "myFun2",
+    "fullyQualifiedName": "DATA_COUNT.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,18 @@
       "userPermissions": []
     },
     "pageId": "CUSTOMER_CARE",
-    "collectionId": "CUSTOMER_CARE_query_js",
+    "collectionId": "CUSTOMER_CARE_DATA_COUNT",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (cust_Remark.selectedOptionLabel == \"INSTALL REQUEST\" && update_status.selectedOptionLabel == \"COMPLETE\") {\n    UPDATE_CUSTOMER.run();\n  } else {\n    UPDATE_CUSTOMER.run();\n    UPDATE_LOGS_CUST.run();\n  }\n}",
+      "body": "async () => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (cust_Remark.selectedOptionLabel == \"INSTALL REQUEST\" && update_status.selectedOptionLabel == \"COMPLETE\") {\n    UPDATE_CUSTOMER.run();\n  } else {\n    UPDATE_CUSTOMER.run();\n    UPDATE_LOGS_CUST.run();\n  }\n}"
+      "async () => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_query_js.update_cust",
+  "id": "CUSTOMER_CARE_DATA_COUNT.myFun2",
   "deleted": false,
-  "gitSyncId": "63493429528b216c77fefa59_634a7fb00c4af9738a7af10e"
+  "gitSyncId": "63493429528b216c77fefa59_6349364555cab46bbfadfad0"
 }

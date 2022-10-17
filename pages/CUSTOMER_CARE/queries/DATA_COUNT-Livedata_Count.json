@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "update_cust",
-    "fullyQualifiedName": "query_js.update_cust",
+    "name": "Livedata_Count",
+    "fullyQualifiedName": "DATA_COUNT.Livedata_Count",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "CUSTOMER_CARE",
-    "collectionId": "CUSTOMER_CARE_query_js",
+    "collectionId": "CUSTOMER_CARE_DATA_COUNT",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (cust_Remark.selectedOptionLabel == \"INSTALL REQUEST\" && update_status.selectedOptionLabel == \"COMPLETE\") {\n    UPDATE_CUSTOMER.run();\n  } else {\n    UPDATE_CUSTOMER.run();\n    UPDATE_LOGS_CUST.run();\n  }\n}",
+      "body": "() => {\n  let count = 0;\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].REMARK == \"LIVE DATA\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (cust_Remark.selectedOptionLabel == \"INSTALL REQUEST\" && update_status.selectedOptionLabel == \"COMPLETE\") {\n    UPDATE_CUSTOMER.run();\n  } else {\n    UPDATE_CUSTOMER.run();\n    UPDATE_LOGS_CUST.run();\n  }\n}"
+      "() => {\n  let count = 0;\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].REMARK == \"LIVE DATA\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_query_js.update_cust",
+  "id": "CUSTOMER_CARE_DATA_COUNT.Livedata_Count",
   "deleted": false,
-  "gitSyncId": "63493429528b216c77fefa59_634a7fb00c4af9738a7af10e"
+  "gitSyncId": "63493429528b216c77fefa59_634936b2438c8e364a7af51b"
 }

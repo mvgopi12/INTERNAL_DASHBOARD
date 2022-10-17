@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "get_today_with_minutes",
-    "fullyQualifiedName": "helper_js.get_today_with_minutes",
+    "name": "RNR_Active",
+    "fullyQualifiedName": "Search.RNR_Active",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "CUSTOMER_CARE",
-    "collectionId": "CUSTOMER_CARE_helper_js",
+    "collectionId": "CUSTOMER_CARE_Search",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  return moment().format(\"YYYY-MM-DD HH:mm\");\n}",
+      "body": "() => {\n  if (log_remark.selectedOptionValue == \"CALL BACK\" || remark.selectedOptionValue == \"CALL BACK\") {\n    return true;\n  } else if (log_remark.selectedOptionValue == \"RNR\" || remark.selectedOptionValue == \"RNR\") {\n    return true;\n  } else {\n    return false;\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  return moment().format(\"YYYY-MM-DD HH:mm\");\n}"
+      "() => {\n  if (log_remark.selectedOptionValue == \"CALL BACK\" || remark.selectedOptionValue == \"CALL BACK\") {\n    return true;\n  } else if (log_remark.selectedOptionValue == \"RNR\" || remark.selectedOptionValue == \"RNR\") {\n    return true;\n  } else {\n    return false;\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_helper_js.get_today_with_minutes",
+  "id": "CUSTOMER_CARE_Search.RNR_Active",
   "deleted": false,
-  "gitSyncId": "62be7320612750023eb014b3_634161f589020c7ac2967e24"
+  "gitSyncId": "63493429528b216c77fefa59_634a470a55cab46bbfae08a8"
 }
