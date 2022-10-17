@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "dateString => {\n  let date = moment(dateString).format(\"YYYY-MM-DD hh:mm \");\n  return date;\n}",
+      "body": "dateString => {\n  let date = moment(dateString).format(\"YYYY-MM-DD\");\n  return date;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {}
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "dateString => {\n  let date = moment(dateString).format(\"YYYY-MM-DD hh:mm \");\n  return date;\n}"
+      "dateString => {\n  let date = moment(dateString).format(\"YYYY-MM-DD\");\n  return date;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
