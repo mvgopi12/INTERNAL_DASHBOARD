@@ -258,7 +258,7 @@
                                           "key": "borderRadius"
                                         }
                                       ],
-                                      "text": "CALL BACKS",
+                                      "text": "SCHEDULED CALLS",
                                       "isDisabled": false,
                                       "key": "da8ct810vc",
                                       "isDeprecated": false,
@@ -964,7 +964,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn \"OLD LEADS\"\n}else if(appsmith.store.table_num==1)\n{\n\treturn \"LIVE DATA\"\n}else if(appsmith.store.table_num==2)\n{\n\treturn \"CALL BACKS\"\n}\n\telse if(appsmith.store.table_num==3)\n{\n\treturn \"FOLLOWUPS\"\n}\n})()}}",
+                              "text": "{{(()=>{\n\tif(appsmith.store.table_num==0)\n{\n\treturn \"OLD LEADS\"\n}else if(appsmith.store.table_num==1)\n{\n\treturn \"LIVE DATA\"\n}else if(appsmith.store.table_num==2)\n{\n\treturn \"SCHEDULED CALLS\"\n}\n\telse if(appsmith.store.table_num==3)\n{\n\treturn \"FOLLOWUPS\"\n}\n})()}}",
                               "key": "2ewoxh5341",
                               "isDeprecated": false,
                               "rightColumn": 64,
@@ -1430,7 +1430,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "CALL BACKS :",
+                      "text": "SCHEDULED CALLS :",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
                       "rightColumn": 17,
@@ -2355,9 +2355,6 @@
                                 },
                                 {
                                   "key": "borderRadius"
-                                },
-                                {
-                                  "key": "isVisible"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -2370,7 +2367,7 @@
                               "rightColumn": 64,
                               "widgetId": "4plz73cqsa",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": "{{\nlog_remark.selectedOptionLabel==\"CALL BACK\"||log_remark.selectedOptionLabel==\"INSTALL REQUEST\"||log_remark.selectedOptionLabel==\"DEMO REQUEST\"||log_remark.selectedOptionLabel==\"INTERESTED\"\n}}",
+                              "isVisible": "",
                               "datePickerType": "DATE_PICKER",
                               "label": "SCHEDULE DATE",
                               "version": 2,
@@ -2889,7 +2886,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "Button2Copy",
-                      "onClick": "{{\n(()=>{\nquery_js.update_data()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.table_num!=4)\n\t{\n\t\tquery_js.next()\n\t}\ncloseModal(\"LEAD_DATA\")})()\nSELECT_LEADS.run()\nresetWidget(\"log_date\",true)\n}}",
+                      "onClick": "{{\n(()=>{\nquery_js.update_data()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.table_num!=4)\n\t{\n\t\tquery_js.next()\n\t}\ncloseModal(\"LEAD_DATA\")})()\nSELECT_LEADS.run()\nSELECT_LEADS_CALLBACK.run()\nresetWidget(\"log_date\",true)\n}}",
                       "buttonColor": "#4f46e5",
                       "dynamicPropertyPathList": [
                         {
@@ -5587,30 +5584,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "CUSTOMER_CARE_SELECT_LEADS",
-              "name": "SELECT_LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "CUSTOMER_CARE_SELECT_LEADS_CALLBACK",
-              "name": "SELECT_LEADS_CALLBACK",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "CUSTOMER_CARE_REMARK_DROP_DOWN",
               "name": "REMARK_DROP_DOWN",
               "confirmBeforeExecute": false,
@@ -5625,9 +5598,7 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "CUSTOMER_CARE_query_js.pegereload",
               "name": "query_js.pegereload",
@@ -5642,13 +5613,38 @@
           ],
           [
             {
+              "id": "CUSTOMER_CARE_SELECT_LEADS",
+              "name": "SELECT_LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "CUSTOMER_CARE_Logs_data",
               "name": "Logs_data",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
-                "appsmith.user.username",
-                "helper_js.get_today()"
+                "helper_js.get_today()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "CUSTOMER_CARE_SELECT_LEADS_CALLBACK",
+              "name": "SELECT_LEADS_CALLBACK",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "helper_js.get_today_with_minutes()",
+                "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
             }

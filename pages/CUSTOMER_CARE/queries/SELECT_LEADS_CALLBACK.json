@@ -66,9 +66,9 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "NOT_EQ",
+                "condition": "LTE",
                 "key": "SCHEDULE_DATE",
-                "value": "\"\""
+                "value": "{{helper_js.get_today_with_minutes()}}"
               },
               {
                 "key": "CALLER",
@@ -86,12 +86,17 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.where.data.children[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.user.username"
+      "appsmith.user.username",
+      "helper_js.get_today_with_minutes()"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
