@@ -5647,8 +5647,8 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
-                "helper_js.get_today()",
-                "appsmith.user.username"
+                "appsmith.user.username",
+                "helper_js.get_today()"
               ],
               "timeoutInMillisecond": 10000
             }

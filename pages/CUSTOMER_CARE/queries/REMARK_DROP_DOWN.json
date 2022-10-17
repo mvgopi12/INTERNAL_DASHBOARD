@@ -70,7 +70,12 @@
               {
                 "condition": "NOT_EQ",
                 "key": "REMARKS",
-                "value": "\"\""
+                "value": "LIVE DATA"
+              },
+              {
+                "key": "REMARKS",
+                "condition": "NOT_EQ",
+                "value": "OLD LEADS"
               }
             ]
           }

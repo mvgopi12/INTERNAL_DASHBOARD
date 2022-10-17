@@ -16,7 +16,7 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_query_js",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  if (cust_Remark.selectedOptionLabel == \"INSTALL REQUEST\" && update_status.selectedOptionLabel == \"COMPLETE\") {\n    UPDATE_CUSTOMER.run();\n  } else {\n    UPDATE_CUSTOMER.run();\n    UPDATE_LOGS_CUST.run();\n  }\n}",
