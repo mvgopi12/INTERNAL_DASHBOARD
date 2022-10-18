@@ -16,7 +16,7 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_DATA_COUNT",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  let count = 0;\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].REMARK == \"INTERESTED\" || SELECT_LEADS.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
