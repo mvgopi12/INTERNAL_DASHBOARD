@@ -6301,18 +6301,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "CUSTOMER_CARE_SELECT_LEADS",
-              "name": "SELECT_LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "CUSTOMER_CARE_REMARK_DROP_DOWN",
               "name": "REMARK_DROP_DOWN",
               "confirmBeforeExecute": false,
@@ -6333,13 +6321,22 @@
           ],
           [
             {
-              "id": "CUSTOMER_CARE_query_js.pegereload",
-              "name": "query_js.pegereload",
-              "collectionId": "CUSTOMER_CARE_query_js",
+              "id": "CUSTOMER_CARE_GET_CALLERSDATA",
+              "name": "GET_CALLERSDATA",
               "confirmBeforeExecute": false,
-              "pluginType": "JS",
+              "pluginType": "SAAS",
               "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"table\", query_js.getTodayData());\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"table\", query_js.get_request_data());\n  storeValue(\"current_call_back_card\", 0);\n  storeValue(\"table\", Search.Schd());\n  storeValue(\"current_followup_card\", 0);\n  storeValue(\"table\", query_js.get_followups_data());\n}"
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "CUSTOMER_CARE_SELECT_LEADS",
+              "name": "SELECT_LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -6364,8 +6361,21 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
-                "appsmith.user.username",
-                "helper_js.get_today_with_minutes()"
+                "helper_js.get_today_with_minutes()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "CUSTOMER_CARE_query_js.pegereload",
+              "name": "query_js.pegereload",
+              "collectionId": "CUSTOMER_CARE_query_js",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"table\", query_js.getTodayData());\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"table\", query_js.get_request_data());\n  storeValue(\"current_call_back_card\", 0);\n  storeValue(\"table\", Search.Schd());\n  storeValue(\"current_followup_card\", 0);\n  storeValue(\"table\", query_js.get_followups_data());\n}"
               ],
               "timeoutInMillisecond": 10000
             }
