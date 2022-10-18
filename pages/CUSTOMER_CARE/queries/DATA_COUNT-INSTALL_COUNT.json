@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "activation",
-    "fullyQualifiedName": "Search.activation",
+    "name": "INSTALL_COUNT",
+    "fullyQualifiedName": "DATA_COUNT.INSTALL_COUNT",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "CUSTOMER_CARE",
-    "collectionId": "CUSTOMER_CARE_Search",
+    "collectionId": "CUSTOMER_CARE_DATA_COUNT",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  for (let i = GET_CALLERSDATA.data.length - 1; i >= 0; i--) {\n    if (GET_CALLERSDATA.data[i].REMARK == \"INTERESTED\" || GET_CALLERSDATA.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\") {\n      return true;\n    }\n  }\n}",
+      "body": "() => {\n  let count = 0;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  for (let i = GET_CALLERSDATA.data.length - 1; i >= 0; i--) {\n    if (GET_CALLERSDATA.data[i].REMARK == \"INTERESTED\" || GET_CALLERSDATA.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\") {\n      return true;\n    }\n  }\n}"
+      "() => {\n  let count = 0;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CUSTOMER_CARE_Search.activation",
+  "id": "CUSTOMER_CARE_DATA_COUNT.INSTALL_COUNT",
   "deleted": false,
-  "gitSyncId": "63493429528b216c77fefa59_634953cd438c8e364a7af831"
+  "gitSyncId": "634cfe172124b03009a1ee24_634e5cb31e335d1c41c3f629"
 }

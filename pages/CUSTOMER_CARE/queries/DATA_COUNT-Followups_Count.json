@@ -16,7 +16,7 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_DATA_COUNT",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  let count = 0;\n  for (let i = SELECT_LEADS.data.length - 1; i >= 0; i--) {\n    if (SELECT_LEADS.data[i].REMARK == \"INTERESTED\" || SELECT_LEADS.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" && SELECT_LEADS.data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
@@ -43,5 +43,5 @@
   },
   "id": "CUSTOMER_CARE_DATA_COUNT.Followups_Count",
   "deleted": false,
-  "gitSyncId": "63493429528b216c77fefa59_634936f1438c8e364a7af51e"
+  "gitSyncId": "634cfe172124b03009a1ee24_634e5ce2bd5f4801cd925035"
 }

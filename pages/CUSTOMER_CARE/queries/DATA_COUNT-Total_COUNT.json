@@ -16,10 +16,10 @@
     "pageId": "CUSTOMER_CARE",
     "collectionId": "CUSTOMER_CARE_DATA_COUNT",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let total = 0;\n  total = DATA_COUNT.Old_Count() + DATA_COUNT.Livedata_Count() + DATA_COUNT.Callbacks_Count() + DATA_COUNT.Followups_Count();\n  return total;\n}",
+      "body": "() => {\n  let total = 0;\n  total = DATA_COUNT.Old_Count() + DATA_COUNT.Livedata_Count() + DATA_COUNT.Callbacks_Count() + DATA_COUNT.Follow_Count();\n  return total;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let total = 0;\n  total = DATA_COUNT.Old_Count() + DATA_COUNT.Livedata_Count() + DATA_COUNT.Callbacks_Count() + DATA_COUNT.Followups_Count();\n  return total;\n}"
+      "() => {\n  let total = 0;\n  total = DATA_COUNT.Old_Count() + DATA_COUNT.Livedata_Count() + DATA_COUNT.Callbacks_Count() + DATA_COUNT.Follow_Count();\n  return total;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

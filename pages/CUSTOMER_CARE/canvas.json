@@ -1574,7 +1574,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{DATA_COUNT.Followups_Count()}}",
+                      "text": "{{DATA_COUNT.Follow_Count()}}",
                       "key": "jmjpymtkdl",
                       "isDeprecated": false,
                       "rightColumn": 44,
@@ -1796,7 +1796,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button18",
-                      "onClick": "{{ACTIVATION.run()}}",
+                      "onClick": "{{\n(()=>{\n\tSearch.IS_Active()\n\t})()\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -2834,7 +2834,7 @@
                               "key": "r3s4y99m6m",
                               "onDateSelected": "",
                               "labelTextSize": "0.875rem",
-                              "isRequired": "false",
+                              "isRequired": "",
                               "isDeprecated": false,
                               "rightColumn": 64,
                               "widgetId": "4plz73cqsa",
@@ -3057,7 +3057,7 @@
                           "detachFromLayout": true,
                           "widgetId": "vmv3xhd81p",
                           "containerStyle": "none",
-                          "bottomRow": 250,
+                          "bottomRow": 210,
                           "topRow": 0,
                           "parentRowSpace": 1,
                           "isVisible": true,
@@ -3243,60 +3243,6 @@
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "iconAlign": "left",
                               "defaultText": "{{query_js.return_current_card().ALTERNATE_NUMBER\n}}"
-                            },
-                            {
-                              "boxShadow": "none",
-                              "widgetName": "log_status",
-                              "isFilterable": true,
-                              "displayName": "Select",
-                              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                              "labelText": "STATUS",
-                              "searchTags": [
-                                "dropdown"
-                              ],
-                              "topRow": 19,
-                              "bottomRow": 23,
-                              "parentRowSpace": 10,
-                              "labelWidth": "20",
-                              "type": "SELECT_WIDGET",
-                              "serverSideFiltering": false,
-                              "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( query_js.return_current_card().STATUS))(log_status.options, log_status.serverSideFiltering) }}",
-                              "animateLoading": true,
-                              "dynamicTriggerPathList": [],
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "options"
-                                },
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                },
-                                {
-                                  "key": "defaultOptionValue"
-                                }
-                              ],
-                              "leftColumn": 0,
-                              "labelPosition": "Left",
-                              "options": "{{STATUS_DROP_DOWN.data.map( (obj) =>{ return  {'label': obj.STATUS, 'value': obj.STATUS } })}}",
-                              "placeholderText": "Select option",
-                              "isDisabled": false,
-                              "key": "j2sgvt1uk8",
-                              "labelTextSize": "0.875rem",
-                              "isRequired": false,
-                              "isDeprecated": false,
-                              "rightColumn": 64,
-                              "widgetId": "ya3yzlatxk",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "version": 1,
-                              "parentId": "vmv3xhd81p",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                             }
                           ]
                         }
@@ -6355,6 +6301,18 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "CUSTOMER_CARE_SELECT_LEADS",
+              "name": "SELECT_LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "CUSTOMER_CARE_REMARK_DROP_DOWN",
               "name": "REMARK_DROP_DOWN",
               "confirmBeforeExecute": false,
@@ -6383,25 +6341,13 @@
           ],
           [
             {
-              "id": "CUSTOMER_CARE_SELECT_LEADS",
-              "name": "SELECT_LEADS",
+              "id": "CUSTOMER_CARE_query_js.pegereload",
+              "name": "query_js.pegereload",
+              "collectionId": "CUSTOMER_CARE_query_js",
               "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
+              "pluginType": "JS",
               "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "CUSTOMER_CARE_Logs_data",
-              "name": "Logs_data",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "helper_js.get_today()",
-                "appsmith.user.username"
+                "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"table\", query_js.getTodayData());\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"table\", query_js.get_request_data());\n  storeValue(\"current_call_back_card\", 0);\n  storeValue(\"table\", Search.Schd());\n  storeValue(\"current_followup_card\", 0);\n  storeValue(\"table\", query_js.get_followups_data());\n}"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -6421,13 +6367,13 @@
           ],
           [
             {
-              "id": "CUSTOMER_CARE_query_js.pegereload",
-              "name": "query_js.pegereload",
-              "collectionId": "CUSTOMER_CARE_query_js",
+              "id": "CUSTOMER_CARE_Logs_data",
+              "name": "Logs_data",
               "confirmBeforeExecute": false,
-              "pluginType": "JS",
+              "pluginType": "SAAS",
               "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_lead_card\", 0);\n  storeValue(\"table\", query_js.getTodayData());\n  storeValue(\"current_demo_card\", 0);\n  storeValue(\"table\", query_js.get_request_data());\n  storeValue(\"current_call_back_card\", 0);\n  storeValue(\"table\", Search.Schd());\n  storeValue(\"current_followup_card\", 0);\n  storeValue(\"table\", query_js.get_followups_data());\n}"
+                "helper_js.get_today()",
+                "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
             }
