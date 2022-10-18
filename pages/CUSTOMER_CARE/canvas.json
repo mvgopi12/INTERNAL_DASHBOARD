@@ -6319,14 +6319,6 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "CUSTOMER_CARE_STATUS_DROP_DOWN",
-              "name": "STATUS_DROP_DOWN",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -6354,26 +6346,26 @@
           ],
           [
             {
-              "id": "CUSTOMER_CARE_SELECT_LEADS_CALLBACK",
-              "name": "SELECT_LEADS_CALLBACK",
+              "id": "CUSTOMER_CARE_Logs_data",
+              "name": "Logs_data",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
-                "helper_js.get_today_with_minutes()",
-                "appsmith.user.username"
+                "appsmith.user.username",
+                "helper_js.get_today()"
               ],
               "timeoutInMillisecond": 10000
             }
           ],
           [
             {
-              "id": "CUSTOMER_CARE_Logs_data",
-              "name": "Logs_data",
+              "id": "CUSTOMER_CARE_SELECT_LEADS_CALLBACK",
+              "name": "SELECT_LEADS_CALLBACK",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
-                "helper_js.get_today()",
-                "appsmith.user.username"
+                "appsmith.user.username",
+                "helper_js.get_today_with_minutes()"
               ],
               "timeoutInMillisecond": 10000
             }
