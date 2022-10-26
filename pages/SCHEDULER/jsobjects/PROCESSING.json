@@ -7,7 +7,8 @@
     "actions": [],
     "archivedActions": [],
     "body": "export default {\n\tget_scheduler: () => {\n\t\tshowModal(\"amc_scheduler\")\n\t\treturn\n\t},\n\tcopy_customer_details:()=>{\n\t\tlet data=pop1_date.formattedDate+\"\\n\"+pop1_userid.text+\"\\nNAME: \"+pop1_name.text+\"\\nCONTACT: \"+pop1_number.text+\"\\nADDRESS: \"+pop1_address.text+\"\\nNOTE: \"+pop1_note.text+\"\\nLOCATION: \"+Map1.selectedMarker.lat+\",\"+Map1.selectedMarker.long\n\t\tshowAlert(\"copied!\",\"success\")\n\t\treturn data\n\t}\n}",
-    "variables": []
+    "variables": [],
+    "userPermissions": []
   },
   "id": "SCHEDULER_PROCESSING",
   "deleted": false,

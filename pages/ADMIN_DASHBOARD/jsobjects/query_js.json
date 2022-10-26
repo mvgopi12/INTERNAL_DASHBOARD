@@ -16,7 +16,8 @@
         "name": "myVar2",
         "value": "{}"
       }
-    ]
+    ],
+    "userPermissions": []
   },
   "id": "ADMIN_DASHBOARD_query_js",
   "deleted": false,

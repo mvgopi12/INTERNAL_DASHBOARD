@@ -12,7 +12,8 @@
         "name": "table_variables",
         "value": "[]"
       }
-    ]
+    ],
+    "userPermissions": []
   },
   "id": "CUSTOMER_CARE_helper_js",
   "deleted": false,

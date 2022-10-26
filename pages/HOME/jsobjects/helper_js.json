@@ -16,7 +16,8 @@
         "name": "myVar2",
         "value": "{}"
       }
-    ]
+    ],
+    "userPermissions": []
   },
   "id": "HOME_helper_js",
   "deleted": false,

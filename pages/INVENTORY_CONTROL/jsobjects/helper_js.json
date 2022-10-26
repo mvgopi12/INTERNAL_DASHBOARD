@@ -16,7 +16,8 @@
         "name": "myVar2",
         "value": "{}"
       }
-    ]
+    ],
+    "userPermissions": []
   },
   "id": "INVENTORY_CONTROL_helper_js",
   "deleted": false,

@@ -16,7 +16,8 @@
         "name": "table_variables",
         "value": "{\n  lead_id: \"\",\n  other: \"\"\n}"
       }
-    ]
+    ],
+    "userPermissions": []
   },
   "id": "ADMIN_DASHBOARD_helper_js",
   "deleted": false,
